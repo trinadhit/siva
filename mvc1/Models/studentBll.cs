@@ -14,7 +14,7 @@ namespace mvc1.Models
     public class studentBll
     {
         string cs = ConfigurationManager.ConnectionStrings["sivamvc"].ConnectionString;
-        string cstrinadh = ConfigurationManager.ConnectionStrings["trinadhmvc"].ConnectionString;
+        //string cstrinadh = ConfigurationManager.ConnectionStrings["trinadhmvc"].ConnectionString;
         SqlConnection con;
         SqlCommand cmd;
         public string InsertUserDtls(studentVos objuser)
