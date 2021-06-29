@@ -1,0 +1,71 @@
+﻿@model IEnumerable<mvc1.Models.studentVos>
+
+@{
+    ViewBag.Title = "studentdetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<h1 style="text-align: center;color: green;font-weight: bold;font-size: 18pt;">TOTAL STUDENTS</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            SL NO
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUDENT_FNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUDENT_LNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FATHER_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOBILE_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROLL_NO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.slno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUDENT_FNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUDENT_LNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FATHER_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOBILE_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROLL_NO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.slno  }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
